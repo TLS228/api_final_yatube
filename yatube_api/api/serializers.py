@@ -24,9 +24,6 @@ class CommentSerializer(serializers.ModelSerializer):
 
     class Meta:
         fields = '__all__'
-        # при замене fields = '__all__'
-        # и применении ('author', 'id', 'text', 'pub_date', 'image', 'group')
-        # падают тесты
         model = Comment
         read_only_fields = ('post',)
 

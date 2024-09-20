@@ -6,11 +6,11 @@ API для Yatube сервиса
 
 ### Работа выполенена:
 
-Соловей Никита Сергеевич https://github.com/TLS228
+[Соловей Никита Сергеевич](https://github.com/TLS228)
 
 ### Стек:
 
-* Python 3.9.13
+* Python 3.9
 * Django
 * Django REST framework
 * Djoser + JWT
@@ -61,4 +61,34 @@ python manage.py migrate
 
 ```
 python manage.py runserver
+```
+
+### Примеры запросов которые вы можете сделать к API:
+
+Получить список постов (GET):
+
+```
+http://127.0.0.1:8000/api/v1/posts/
+```
+
+Получить комментарии к посту (GET):
+
+```
+http://127.0.0.1:8000/api/v1/posts/{post_id}/comments/
+```
+
+Получить список сообществ (GET):
+
+```
+http://127.0.0.1:8000/api/v1/groups/
+```
+
+### Получить JWT-токен:
+Payload
+{
+  "username": "string",
+  "password": "string"
+}
+```
+POST http://127.0.0.1:8000/api/v1/jwt/create/
 ```
