@@ -24,7 +24,7 @@ class Post(models.Model):
         'Дата публикации', auto_now_add=True
     )
     author = models.ForeignKey(
-        User, on_delete=models.SET_NULL, related_name='posts'
+        User, on_delete=models.CASCADE, related_name='posts'
     )
     image = models.ImageField(
         upload_to='posts/', null=True, blank=True
@@ -45,10 +45,10 @@ class Comment(models.Model):
     """Модель для комментариев,используется для хранения текста комментария,
     автора и поста"""
     author = models.ForeignKey(
-        User, on_delete=models.SET_NULL, related_name='comments'
+        User, on_delete=models.CASCADE, related_name='comments'
     )
     post = models.ForeignKey(
-        Post, on_delete=models.SET_NULL, related_name='comments'
+        Post, on_delete=models.CASCADE, related_name='comments'
     )
     text = models.TextField()
     created = models.DateTimeField(
