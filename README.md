@@ -4,16 +4,16 @@
 
 API для Yatube сервиса
 
+### Работа выполенена:
+
+[Соловей Никита Сергеевич] (https://github.com/TLS228)
+
 ### Стек:
 
 * Python 3.9.13
 * Django
 * Django REST framework
 * Djoser + JWT
-
-### Работа выполенена:
-
-[Соловей Никита Сергеевич] (https://github.com/TLS228)
 
 ### Как установить и запустить проект:
 
